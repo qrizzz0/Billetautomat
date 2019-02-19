@@ -6,6 +6,7 @@ public class Billetautomat {
       System.out.println("All hail Senpai <3 ");
       
         System.out.println("All hail Senpai :( ");
+        System.out.println("All hail Senpai ∩_∩ ");
       
     }
   }
