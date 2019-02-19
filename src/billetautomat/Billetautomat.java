@@ -5,7 +5,9 @@ public class Billetautomat {
     while(true){
       System.out.println("All hail Senpai <3 ");
       
-        System.out.println("All hail Senpai :( ");
+      System.out.println("All hail Senpai :( ");
+      
+      System.out.println("Dette er en test mere :D");
       
     }
   }
