@@ -11,4 +11,9 @@ package billetautomat;
  */
 public class BenytBilletautomat {
     
+    public static void main(String[] args){
+        Billetautomat.opsætBillet();
+        Billetautomat.getBilletPriser();
+    }
+    
 }

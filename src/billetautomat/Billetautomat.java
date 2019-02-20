@@ -1,8 +1,16 @@
 package billetautomat;
+import java.util.Scanner;
+
+
 
 public class Billetautomat {
+  public static int[] ZonePriser; 
+  
   public static void main(String[] args){
-    while(true){
+   
+      
+      
+      while(true){
       System.out.println("All hail Senpai <3 ");
       
         System.out.println("All hail Senpai :( ");
@@ -12,6 +20,50 @@ public class Billetautomat {
       System.out.println("Dette er en test mere :D");
       System.out.println("Hej allesammen");
       
-    }
+      
+      
+      
+     }
+      
+   
+      
+           
   }
-}
+
+    public static void opsætBillet() {
+         
+ 
+      
+      System.out.println("Indtast billetpriser: ");
+     
+      //Lad os for nu bare sige at der er 5 forskellige billetter
+      int i; 
+      ZonePriser = new int[6]; 
+      
+     
+      
+      for (i = 1; i < 6; i++){
+     Scanner scanner = new Scanner(System.in); //Laver en scanner  
+     System.out.println("Pris for zone " + i);
+     ZonePriser[i]= scanner.nextInt(); 
+      }
+    
+    }
+    
+
+    static void getBilletPriser() {
+     int k;
+     for (k = 1; k < 6; k++){
+          System.out.print("Pris for zone" + k + ". " + ZonePriser[k] + "      ");
+      }
+    }
+
+   
+    
+    
+    
+ }
+  
+ 
+
+ 
