@@ -10,6 +10,7 @@ public class Billetautomat {
       System.out.println("All hail Senpai :( ");
       
       System.out.println("Dette er en test mere :D");
+      System.out.println("Hej allesammen");
       
     }
   }
