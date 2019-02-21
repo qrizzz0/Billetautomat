@@ -9,7 +9,7 @@ public class Billetautomat {
   
   public static void main(String[] args){
    
-      
+      System.out.println("Hello?");
       
       while(true){
       System.out.println("All hail Senpai <3 ");
