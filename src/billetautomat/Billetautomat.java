@@ -47,6 +47,9 @@ public class Billetautomat {
      Scanner scanner = new Scanner(System.in); //Laver en scanner  
      System.out.println("Pris for zone " + i);
      ZonePriser[i]= scanner.nextInt(); 
+        //Tillader instalatøren at indstille balancen så han kan printe biletter uden at bruge penge
+       System.out.println("Indtast balance: ");
+       setBalance();
       }
     
     }
@@ -59,8 +62,8 @@ public class Billetautomat {
       }
     }
 
-    public static void getBalance(){
-        System.out.println(balance);
+    public static double getBalance(){ //funktionen returnerer nu balancen i stedet for at printe den :)
+        return balance;
     }
     public static void setBalance(){
         Scanner scan = new java.util.Scanner(System.in);
