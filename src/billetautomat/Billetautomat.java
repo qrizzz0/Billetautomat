@@ -6,30 +6,6 @@ import java.util.Scanner;
 public class Billetautomat {
   public static int[] ZonePriser; //Tror Nordfalk bliver glad hvis vi gør den her private :)
   private static double balance = 0;
-  
-  public static void main(String[] args){
-   
-      System.out.println("Hello?");
-      
-      while(true){
-      System.out.println("All hail Senpai <3 ");
-      
-        System.out.println("All hail Senpai :( ");
-        System.out.println("All hail Senpai ∩_∩ ");
-      System.out.println("All hail Senpai :( ");
-      
-      System.out.println("Dette er en test mere :D");
-      System.out.println("Hej allesammen");
-      
-      
-      
-      
-     }
-      
-   
-      
-           
-  }
 
     public static void opsætBillet() {
          
