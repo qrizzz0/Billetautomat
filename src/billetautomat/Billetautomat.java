@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 public class Billetautomat {
-  public static int[] ZonePriser; 
+  public static int[] ZonePriser; //Tror Nordfalk bliver glad hvis vi gør den her private :)
   
   public static void main(String[] args){
    
@@ -58,6 +58,9 @@ public class Billetautomat {
       }
     }
 
+    public static void getBalance(){
+        
+    }
    
     
     
