@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Billetautomat {
   public static int[] ZonePriser; //Tror Nordfalk bliver glad hvis vi gør den her private :)
+  private static double balance = 0;
   
   public static void main(String[] args){
    
@@ -59,7 +60,11 @@ public class Billetautomat {
     }
 
     public static void getBalance(){
-        
+        System.out.println(balance);
+    }
+    public static void setBalance(){
+        Scanner scan = new java.util.Scanner(System.in);
+        balance = scan.nextDouble();
     }
    
     
