@@ -12,6 +12,8 @@ package billetautomat;
 public class BenytBilletautomat {
     
     public static void main(String[] args){
+        Billetautomat.købBillet();
+        
         String SecretCode = "1337";
         
         Billetautomat.getBilletPriser();
