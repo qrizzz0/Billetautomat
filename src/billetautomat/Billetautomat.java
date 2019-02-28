@@ -49,7 +49,7 @@ public class Billetautomat {
         balance = scan.nextDouble();
     }
 
-    public void udskrivning() {
+    public static void udskrivning() {
         System.out.println("  @@@@@@@@@@@@@@@@@@@@@@  ");
         System.out.println("@@ Borgen Trafikselskab @@");
         System.out.println("  @@@@@@@@@@@@@@@@@@@@@@  ");
@@ -154,6 +154,7 @@ public class Billetautomat {
                 System.out.println("Du har købt 1 voksenbillet");
                 sum=sum-voksen;
                 System.out.println("Du får: "+sum+"kr. tilbage");
+                Billetautomat.udskrivning();
             }
            break;
         case 2:
@@ -161,6 +162,7 @@ public class Billetautomat {
                 System.out.println("Du har købt 1 børnebillet");
                 sum=sum-barn;
                 System.out.println("Du får: "+sum+"kr. tilbage");
+                Billetautomat.udskrivning();
             }
            break;
         case 3:
@@ -168,6 +170,7 @@ public class Billetautomat {
                 System.out.println("Du har købt 1 hundebillet");
                 sum=sum-hund;
                 System.out.println("Du får: "+sum+"kr. tilbage");
+                Billetautomat.udskrivning();
             }
            break;
         case 4:
@@ -175,6 +178,7 @@ public class Billetautomat {
                 System.out.println("Du har købt 1 cykelbillet");
                 sum=sum-cykel;
                 System.out.println("Du får: "+sum+"kr. tilbage");
+                Billetautomat.udskrivning();
             }
             break;
         case 5:
