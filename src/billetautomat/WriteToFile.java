@@ -4,9 +4,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class WriteToFile {
-        private FileWriter writer;
+    private FileWriter writer;
     
-        public WriteToFile(String FileName) {
+    public WriteToFile(String FileName) {
         try {
         writer = new FileWriter(FileName, true); //Opret fil. Catch exception hvis noget går galt
         }
@@ -38,6 +38,4 @@ public class WriteToFile {
             ex.getStackTrace();
         }
     }
-
-    
 }
