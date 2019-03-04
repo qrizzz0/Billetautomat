@@ -19,16 +19,23 @@ public class MenuKøbTypebillet {
     public static void købBillet() {
         velkommen();
 
+        //Dette skal fjernes på et tidspunkt - jeg lader det blive som debug indtil videre...
         System.out.println(" ");
         System.out.println("Indtast beløb til køb af billetter: ");
 
         Scanner beløb = new java.util.Scanner(System.in);
-        int sum = beløb.nextInt();
+        int input = beløb.nextInt();
+        int sum = input;
+        WriteToFile log = new WriteToFile("log.txt");
+        log.LogToFile("Der er blevet sat " + sum + "kr. ind i automaten!");
+        
         int voksen = 30;
         int barn = 15;
         int hund = 15;
         int cykel = 10;
 
+        //Hertil!-----------------------------------------
+        
         Scanner valg = new java.util.Scanner(System.in);
         int valget = -1;
 
