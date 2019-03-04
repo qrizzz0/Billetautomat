@@ -48,13 +48,13 @@ public class Billet {
         return balance;
     }
 
-    private static void setBalance() {
+    public static void setBalance() {
         Scanner scan = new java.util.Scanner(System.in);
         balance = scan.nextDouble();
     }
 
 
-    private static void getTicketInfo() {
+    public static void getTicketInfo() {
         System.out.println("\n#################################");
         System.out.println("#Velkommen til billetoversigten:#");
         System.out.println("#   Der er i dag blevet solgt:  #");

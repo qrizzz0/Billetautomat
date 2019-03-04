@@ -21,10 +21,10 @@ public class Billetautomat {
                     Billet.opsætBillet();
                     break;
                 case 2:
-                    setBalance();
+                    Billet.setBalance();
                     break;
                 case 3:
-                    getTicketInfo();
+                    Billet.getTicketInfo();
                     break;
                 case 4:
                     admin = false;
