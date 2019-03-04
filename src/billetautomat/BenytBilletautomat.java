@@ -8,7 +8,7 @@ public class BenytBilletautomat {
         
         String SecretCode = "1337";
         
-        Billetautomat.getBilletPriser();
+        Billet.getBilletPriser();
                
         String CodeInput = "1337";
         if (CodeInput.equals(SecretCode)) {
