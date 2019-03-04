@@ -4,6 +4,7 @@ package billetautomat;
 public class BenytBilletautomat {
     
     public static void main(String[] args){
+        MenuKøbTypebillet.velkommen();
         MenuKøbTypebillet.købBillet();
         
         String SecretCode = "1337";

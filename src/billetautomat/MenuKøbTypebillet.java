@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MenuKøbTypebillet {
 
-    private static void velkommen() {
+    public static void velkommen() {
         System.out.println("  @@@@@@@@@@@@@@@@@@@@@@  ");
         System.out.println("@@ Borgen Trafikselskab @@");
         System.out.println("  @@@@@@@@@@@@@@@@@@@@@@  ");
@@ -17,7 +17,6 @@ public class MenuKøbTypebillet {
     }
 
     public static void købBillet() {
-        velkommen();
 
         //Dette skal fjernes på et tidspunkt - jeg lader det blive som debug indtil videre...
         System.out.println(" ");

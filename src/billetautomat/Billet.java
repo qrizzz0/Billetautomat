@@ -22,10 +22,10 @@ public class Billet {
             System.out.print("\n\n");
         }
         else {
-            ZonePriser = new int[6];
+            ZonePriser = new int[3];
         }
         
-        for (i = 1; i < 6; i++) {
+        for (i = 1; i < 2; i++) {
             Scanner scanner = new Scanner(System.in); //Laver en scanner  
             System.out.println("Pris for zone " + i);
             ZonePriser[i] = scanner.nextInt();
@@ -36,7 +36,7 @@ public class Billet {
     public static void getBilletPriser() {
         int k;
         if (ZonePriser != null) {
-            for (k = 1; k < 6; k++) {
+            for (k = 1; k < 2; k++) {
                 System.out.print("Pris for zone" + k + ". " + ZonePriser[k] + "      ");
             }
         } else {
