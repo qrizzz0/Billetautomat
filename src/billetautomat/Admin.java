@@ -2,9 +2,11 @@ package billetautomat;
 
 import java.util.Scanner;
 
-public class Billetautomat {
-
-    public static void adminMenu() {
+public class Admin {
+    WriteToFile log = new WriteToFile("log.txt");
+    
+    public void adminMenu() {
+        log.logToFile("Admin-menuen er åbnet");
         boolean admin = true;
         while (admin) {
             System.out.println("Velkommen til admin menuen.");
@@ -18,27 +20,37 @@ public class Billetautomat {
 
             switch (choice) {
                 case 1:
-                    Billet.opsætBillet();
+                    opsætBilletter();
                     break;
                 case 2:
-                    Billet.setBalance();
+                    setBalance();
                     break;
                 case 3:
-                    Billet.getTicketInfo();
+                    getBilletTyper();
                     break;
                 case 4:
                     admin = false;
                     break;
-
                 default:
                     break;
-
             }
         }
     }
-    //For nu har jeg blot lavet nogle billettyper da jeg ikke helt ved hvordan det med zonerne fungere.
-
-     
-
-
+    
+    void opsætBilletter() {
+        log.logToFile("Billetopsætningen er startet.");
+        //Skal først getbillettyper()
+        //Derefter skal den kunne tilføje nye billettyper
+    }    
+    
+    void setBalance() {
+        log.logToFile("Balancen bliver ændret af admin til:"); //Skal vise til hvor meget!
+        //
+        //
+    }
+    
+    void getBilletTyper() {
+        log.logToFile("Viser alle billettyper til administratoren.");
+        //Skal helst returnere noget i stil med et array/arraylist af billet-objekter.
+    }
 }

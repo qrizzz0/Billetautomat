@@ -6,17 +6,17 @@ import java.io.IOException;
 public class WriteToFile {
     private FileWriter writer;
     
-    public WriteToFile(String FileName) {
+    public WriteToFile(String fileName) {
         try {
-        writer = new FileWriter(FileName, true); //Opret fil. Catch exception hvis noget går galt
+        writer = new FileWriter(fileName, true); //Opret fil. Catch exception hvis noget går galt
         }
         catch (IOException ex) {
-          System.out.println("Filen kunne ikke åbnes/laves... :o");
+          System.out.println("Filen " + fileName + "kunne ikke åbnes/laves... :o");
           ex.getStackTrace();
         }       
     }
     
-    public void LogToFile(String input) {
+    public void logToFile(String input) {
         Timestamp time = new Timestamp(System.currentTimeMillis());
         try {
             writer.flush();
@@ -28,10 +28,20 @@ public class WriteToFile {
         }
     }
     
-    public void WriteToFile(String input) {
+    public void print(String input) {
         try {
             writer.flush();
             writer.append(input);
+            writer.close();
+        }
+        catch (IOException ex) {
+            ex.getStackTrace();
+        }
+    }
+    public void println(String input) {
+        try {
+            writer.flush();
+            writer.append(input + "\n");
             writer.close();
         }
         catch (IOException ex) {

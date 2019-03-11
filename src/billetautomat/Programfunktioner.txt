@@ -1,0 +1,30 @@
+Programmet skal kunne:
+
+Frontendhåndterings-klasse:
+- Sætte penge ind
+- Udskrive en billet
+- Give penge tilbage
+- Flere forskellige billettyper
+- Billettypers priser skal kunne sættes i en konstruktor el. lignende
+- Skal altid kunne vise balance
+- Startbalance
+- Skrive til en logfil hvad der sker
+
+Administrator-klasse:
+- Administratorpanel
+- Skal kunne sætte en balance
+- Skal kunne udskrive log
+- Loggen skal kunne behandles og udskrives med funktioner (e.g. Beløb over 500 og tilbagebetalinger)
+- Skal få en oversigt over hvor meget der er solgt for på et vist stykke tid
+- Skal kunne ændre billetpriserne
+
+Billet-objekt:
+- Pris
+- Billettype
+
+
+GUI-klasse:
+- (GUI)
+
+Database-klasse:
+- Database

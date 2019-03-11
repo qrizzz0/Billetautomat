@@ -1,4 +1,3 @@
-
 package billetautomat;
 
 public class BilletDesign {
