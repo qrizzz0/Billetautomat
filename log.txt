@@ -1,1 +1,2 @@
 2019-03-04 16:34:31.431: Der er blevet sat 22kr. ind i automaten!
+2019-03-14 19:05:09.646: Admin-menuen er åbnet

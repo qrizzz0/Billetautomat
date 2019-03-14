@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class Admin {
     WriteToFile log = new WriteToFile("log.txt");
-    
+    ArrayList<String> BilletTyper = new ArrayList<String>();
+
     public void adminMenu() {
         log.logToFile("Admin-menuen er åbnet");
         boolean admin = true;
@@ -38,23 +39,11 @@ public class Admin {
         }
     }
     
-    void opsætBilletter() {
+    void opsætBilletter() { //Bruges til at tilføje, fjerne og se alle billettyperne.
         log.logToFile("Billetopsætningen er startet.");
-        //Skal først getbillettyper()
-        //Derefter skal den kunne tilføje nye billettyper
-    }    
-    
-    void setBalance() {
-        log.logToFile("Balancen bliver ændret af admin til:"); //Skal vise til hvor meget!
-        //
-        //
-    }
-    
-    void getBilletTyper() {
-        log.logToFile("Viser alle billettyper til administratoren."); //Denne skal nok ændres, da det er menu hvor der kan ændres i billettyperne
-        //Arraylist med billettyper.
-        ArrayList<String> BilletTyper = new ArrayList<String>();
-            Scanner scan = new java.util.Scanner(System.in);
+
+        getBilletTyper();
+        Scanner scan = new java.util.Scanner(System.in);
             int valg = scan.nextInt();
             System.out.println("Menu for billettyper");
             System.out.println("1. Tilføj ny billettype");
@@ -88,5 +77,21 @@ public class Admin {
                     System.out.println(BilletTyper);
                     break;
             }
+    }    
+    
+    void setBalance() {
+        log.logToFile("Balancen bliver ændret af admin til:"); //Skal vise til hvor meget!
+        //
+        //
+    }
+    
+    void getBilletTyper() {
+        log.logToFile("Viser alle billettyper til administratoren.");
+        //Arraylist med billettyper.
+        BilletTyper.add("Voksen");
+        BilletTyper.add("Barn");
+        BilletTyper.add("Cykel");
+        BilletTyper.add("Hund");
+
 }
 }
