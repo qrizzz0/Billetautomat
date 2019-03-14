@@ -1,5 +1,6 @@
 package billetautomat;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Admin {
@@ -50,7 +51,42 @@ public class Admin {
     }
     
     void getBilletTyper() {
-        log.logToFile("Viser alle billettyper til administratoren.");
-        //Skal helst returnere noget i stil med et array/arraylist af billet-objekter.
-    }
+        log.logToFile("Viser alle billettyper til administratoren."); //Denne skal nok ændres, da det er menu hvor der kan ændres i billettyperne
+        //Arraylist med billettyper.
+        ArrayList<String> BilletTyper = new ArrayList<String>();
+            Scanner scan = new java.util.Scanner(System.in);
+            int valg = scan.nextInt();
+            System.out.println("Menu for billettyper");
+            System.out.println("1. Tilføj ny billettype");
+            System.out.println("2. Fjern eksisterende billettype");
+            System.out.println("3. Se liste over eksisterende billettyper");
+            
+            switch (valg) {
+                case 1: //Hvis der skal oprettes en ny billettype.
+                String NyBilletType  = scan.nextLine();
+                   BilletTyper.add(NyBilletType);
+                   System.out.println("Alle billettyper:");
+                   System.out.println(BilletTyper); //Billettyperne udskrives så det vides den nye er blevet tilføjet.
+                    break;
+                case 2: //Hvis der skal fjernes en billettype.
+                String FjernBilletType  = scan.nextLine();
+                int i=0;
+                boolean Fundet=false;    
+                while(!Fundet){ //while loop til search, så den indskrevne billettype kan findes
+                    if(FjernBilletType==BilletTyper.get(i)){
+                        BilletTyper.remove(i);
+                        Fundet=true;
+                    }
+                    else if(i>=BilletTyper.size()){ //Hvis den ikke kan findes.
+                        Fundet=true;
+                        System.out.println("Den indtastede billettype findes ikke.");
+                    }
+                }
+                i++;
+                    break;
+                case 3: //Billettyperne udskrives
+                    System.out.println(BilletTyper);
+                    break;
+            }
+}
 }
