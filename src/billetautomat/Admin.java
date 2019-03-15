@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class Admin {
     WriteToFile log = new WriteToFile("log.txt");
-    ArrayList<Billet> billetTyper = new ArrayList<>();
-
+    
     public void adminMenu() {
         log.logToFile("Admin-menuen er åbnet");
         boolean admin = true;
@@ -57,10 +56,10 @@ public class Admin {
                     System.out.println("Hvad skal den koste?");
                     int pris = scan.nextInt();
                 
-                    billetTyper.add(new Billet(NyBilletType, pris));
+                    Start.billetTyper.add(new Billet(NyBilletType, pris));
                 
                     System.out.println("Alle billettyper:");
-                    System.out.println(billetTyper); //Billettyperne udskrives så det vides den nye er blevet tilføjet.
+                    System.out.println(Start.billetTyper); //Billettyperne udskrives så det vides den nye er blevet tilføjet.
                     break;
                 
                 case 2: //Hvis der skal fjernes en billettype.
@@ -68,10 +67,10 @@ public class Admin {
                     int i = 0;
                     boolean fundet=false;    
                     while(!fundet){ //while loop til search, så den indskrevne billettype kan findes
-                        if (FjernBilletType.equals(billetTyper.get(i).GetBilletType())) {
-                            billetTyper.remove(i);
+                        if (FjernBilletType.equals(Start.billetTyper.get(i).GetBilletType())) {
+                            Start.billetTyper.remove(i);
                             fundet=true;
-                        } else if (i >= billetTyper.size()){ //Hvis den ikke kan findes.
+                        } else if (i >= Start.billetTyper.size()){ //Hvis den ikke kan findes.
                             fundet=true;
                             System.out.println("Den indtastede billettype findes ikke.");
                         }
@@ -94,6 +93,6 @@ public class Admin {
     private void getBilletTyper() {
         log.logToFile("Viser alle billettyper til administratoren.");
         System.out.println("Følgende billettyper eksisterer:");
-        billetTyper.forEach((n) -> System.out.println(n.GetBilletType()));
+        Start.billetTyper.forEach((n) -> System.out.println(n.GetBilletType()));
     }
 }
