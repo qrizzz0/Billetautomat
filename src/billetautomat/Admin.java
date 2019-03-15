@@ -52,14 +52,16 @@ public class Admin {
             switch (valg) {
                 case 1: //Hvis der skal oprettes en ny billettype.
                     System.out.println("Hvad skal den nye billettype være?");
-                    String NyBilletType  = scan.nextLine();
+                    String NyBilletType  = scan.next();
                     System.out.println("Hvad skal den koste?");
                     int pris = scan.nextInt();
                 
                     Start.billetTyper.add(new Billet(NyBilletType, pris));
-                
+                    WriteToFile gemType = new WriteToFile("billetTyper.txt");
+                    gemType.println("\n" + NyBilletType + "," + pris);
+                    
                     System.out.println("Alle billettyper:");
-                    System.out.println(Start.billetTyper); //Billettyperne udskrives så det vides den nye er blevet tilføjet.
+                    getBilletTyper();
                     break;
                 
                 case 2: //Hvis der skal fjernes en billettype.
@@ -92,7 +94,7 @@ public class Admin {
     
     private void getBilletTyper() {
         log.logToFile("Viser alle billettyper til administratoren.");
-        System.out.println("Følgende billettyper eksisterer:");
+        System.out.println("\nFølgende billettyper eksisterer:");
         Start.billetTyper.forEach((n) -> System.out.println(n.GetBilletType() + " Pris: " + n.GetBilletPris()));
         System.out.println("\n");
     }
