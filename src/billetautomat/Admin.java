@@ -1,6 +1,5 @@
 package billetautomat;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Admin {
@@ -43,12 +42,13 @@ public class Admin {
 
         getBilletTyper();
         Scanner scan = new java.util.Scanner(System.in);
-        int valg = scan.nextInt();
+        
         System.out.println("Menu for billettyper");
         System.out.println("1. Tilføj ny billettype");
         System.out.println("2. Fjern eksisterende billettype");
         System.out.println("3. Se liste over eksisterende billettyper");
             
+        int valg = scan.nextInt();
             switch (valg) {
                 case 1: //Hvis der skal oprettes en ny billettype.
                     System.out.println("Hvad skal den nye billettype være?");
@@ -93,6 +93,7 @@ public class Admin {
     private void getBilletTyper() {
         log.logToFile("Viser alle billettyper til administratoren.");
         System.out.println("Følgende billettyper eksisterer:");
-        Start.billetTyper.forEach((n) -> System.out.println(n.GetBilletType()));
+        Start.billetTyper.forEach((n) -> System.out.println(n.GetBilletType() + " Pris: " + n.GetBilletPris()));
+        System.out.println("\n");
     }
 }
