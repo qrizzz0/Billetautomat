@@ -23,7 +23,7 @@ public class Start {
                 billetTyper.add(new Billet(type, pris));
             }
         } catch (IOException ex){
-            ex.printStackTrace(); //Vi forventer egentlig en fejl, så vi skal ikke smide en fejl tilbage..
+            //ex.printStackTrace(); //Vi forventer egentlig en fejl, så vi skal ikke smide en fejl tilbage..
             System.out.println("Ingen billettyper fundet i forvejen - det må være første gang maskinen kører");
             System.out.println("Starter administrationspanelet!");
             Admin admin = new Admin();
