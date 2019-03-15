@@ -1,20 +1,20 @@
 package billetautomat;
 
 public class Billet {
-    private int pris;
     private String type;
+    private int pris;
     
     
-    Billet(int pris, String type) {
-        this.pris = pris;
+    Billet(String type, int pris) {
         this.type = type;
+        this.pris = pris;
     }
     
-    int GetBilletPris() {
+    public int GetBilletPris() {
        return pris; 
     }
     
-    String GetBilletType() {
+    public String GetBilletType() {
         return type;
     }
 }
