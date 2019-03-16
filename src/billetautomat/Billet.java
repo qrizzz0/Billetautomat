@@ -17,4 +17,9 @@ public class Billet {
     public String GetBilletType() {
         return type;
     }
+    void KøbBillet(){
+        BilletDesign.udskrivning();
+        //If balance større end billetpris brug funktion udskrivning() under BilletDesign.
+        //else giv fejlbesked
+    }
 }

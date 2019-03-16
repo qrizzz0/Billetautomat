@@ -45,6 +45,7 @@ public class Start {
             Admin admin = new Admin();
             admin.adminMenu();
         }
+     BilletDesign.udskrivning();
         
     }
     
