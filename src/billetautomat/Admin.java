@@ -58,7 +58,7 @@ public class Admin {
                 
                     Start.billetTyper.add(new Billet(NyBilletType, pris));
                     WriteToFile gemType = new WriteToFile("billetTyper.txt");
-                    gemType.println("\n" + NyBilletType + "," + pris);
+                    gemType.println(NyBilletType + "," + pris);
                     
                     System.out.println("Alle billettyper:");
                     getBilletTyper();
