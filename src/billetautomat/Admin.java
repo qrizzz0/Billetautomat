@@ -55,7 +55,7 @@ public class Admin {
                     String NyBilletType  = scan.next();
                     System.out.println("Hvad skal den koste?");
                     int pris = scan.nextInt();
-                
+                    
                     Start.billetTyper.add(new Billet(NyBilletType, pris));
                     WriteToFile gemType = new WriteToFile("billetTyper.txt");
                     gemType.println(NyBilletType + "," + pris);

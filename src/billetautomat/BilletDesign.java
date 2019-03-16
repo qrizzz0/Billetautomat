@@ -1,7 +1,7 @@
 package billetautomat;
 
 public class BilletDesign {
-      public static void udskrivning() {
+      public static void udskrivning(int ValgtBillet) {
         System.out.println("  @@@@@@@@@@@@@@@@@@@@@@  ");
         System.out.println("@@ Borgen Trafikselskab @@");
         System.out.println("  @@@@@@@@@@@@@@@@@@@@@@  ");
@@ -12,11 +12,11 @@ public class BilletDesign {
         System.out.println("@@         @@@@         @@");
         System.out.println("@@          @@          @@");
         System.out.println("@@                      @@");
-        System.out.println("@@        Billet        @@");
+        System.out.println("@@       "+Start.billetTyper.get(ValgtBillet).GetBilletType()+"            @@");
         System.out.println("@@                      @@");
-        System.out.println("@@         Pris         @@");
+        System.out.println("@@         "+Start.billetTyper.get(ValgtBillet).GetBilletPris()+"          @@");
         System.out.println("@@                      @@");
-        System.out.println("@@      Andet info      @@");
+        System.out.println("@@                      @@");
         System.out.println("@@                      @@");
         System.out.println("@@                      @@");
         System.out.println("@@                      @@");

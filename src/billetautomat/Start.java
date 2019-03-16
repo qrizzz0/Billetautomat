@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 public class Start {
     static ArrayList<Billet> billetTyper = new ArrayList<>();
     public static void main(String[] args){
+
         //Tjek om der eksisterer en fil med billet-type informationer
         //Hvis der gør, så indlæs fil i rammen!
         try {
@@ -31,6 +32,7 @@ public class Start {
         }
         
 
+                        Billet.KøbBillet();
 
 //Hvis ikke: Spørg hvor mange billetter og hvilken type
                //Skriv billettyperne til en fil.
@@ -45,8 +47,7 @@ public class Start {
             Admin admin = new Admin();
             admin.adminMenu();
         }
-     BilletDesign.udskrivning();
-        
+
     }
     
 }
