@@ -13,7 +13,8 @@ public class Admin {
             System.out.println("Tast 1 for at modificere billetpriser.");
             System.out.println("Tast 2 for at ændre automatens balance til givent beløb");
             System.out.println("Tast 3 for at se hvor mange billetter der er blevet solgt");
-            System.out.println("Tast 4 for at forlade admin menuen.");
+            System.out.println("Tast 4 for at se beløb af samlede salg af billetter.");
+            System.out.println("Tast 5 for at forlade admin menuen.");
 
             Scanner scan = new java.util.Scanner(System.in);
             int choice = scan.nextInt();
@@ -29,6 +30,9 @@ public class Admin {
                     getBilletTyper();
                     break;
                 case 4:
+                    getSalg();
+                    break;
+                case 5:
                     admin = false;
                     break;
                 default:
@@ -97,5 +101,9 @@ public class Admin {
         System.out.println("\nFølgende billettyper eksisterer:");
         Start.billetTyper.forEach((n) -> System.out.println(n.GetBilletType() + " Pris: " + n.GetBilletPris()));
         System.out.println("\n");
+    }
+    
+    private void getSalg(){
+        System.out.println("Samlede beløb på salg af billetter: "+Start.PrisSum+"kr.");
     }
 }

@@ -40,5 +40,6 @@ public class Billet {
         else{
             System.out.println("Balancen er ikke høj nok til at købe den valgte billet.");
         }
+        Start.PrisSum=Start.PrisSum+Start.billetTyper.get(ValgtBillet).pris;
     }
 }

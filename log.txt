@@ -13,3 +13,5 @@
 2019-03-16 20:08:44.276: Admin-menuen er åbnet
 2019-03-16 20:09:25.141: Forsøger at åbne filen indeholdende billettyperne
 2019-03-16 20:09:30.536: Admin-menuen er åbnet
+2019-03-16 20:37:40.566: Forsøger at åbne filen indeholdende billettyperne
+2019-03-16 20:37:51.736: Admin-menuen er åbnet

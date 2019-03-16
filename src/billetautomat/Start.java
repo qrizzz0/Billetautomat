@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Start {
+    public static int PrisSum=0;
     static ArrayList<Billet> billetTyper = new ArrayList<>();
     public static void main(String[] args){
 
@@ -32,7 +33,7 @@ public class Start {
         }
         
 
-                        Billet.KøbBillet();
+        Billet.KøbBillet();
 
 //Hvis ikke: Spørg hvor mange billetter og hvilken type
                //Skriv billettyperne til en fil.
