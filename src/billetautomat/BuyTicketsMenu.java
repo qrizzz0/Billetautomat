@@ -154,7 +154,7 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
     }//GEN-LAST:event_button2ActionPerformed
 
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
-        // TODO add your handling code here:
+        Start.BilletHandler.AfslutKøb();
     }//GEN-LAST:event_button3ActionPerformed
 
 
