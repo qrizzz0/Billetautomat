@@ -1,7 +1,12 @@
 package billetautomat;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.Timestamp;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class WriteToFile {
     private FileWriter writer;
@@ -55,4 +60,16 @@ public class WriteToFile {
             ex.getStackTrace();
         }
     }
+    
+    public void closeLog (){
+        try {
+        writer.close();
+        }
+        catch(IOException ex) {
+            ex.getStackTrace();
+        }
+               
+    }
+    
+    
 }

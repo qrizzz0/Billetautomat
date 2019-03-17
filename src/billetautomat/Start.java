@@ -1,6 +1,6 @@
-
 package billetautomat;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,7 +14,7 @@ public class Start {
     public static int billetNummer = 0;
     public static MainWindow mWin = new MainWindow("Billetautomat");
     public static BalanceHandler AutomatBalance = new BalanceHandler();
-    public static void main(String[] args){
+    public static void main(String[] args) throws FileNotFoundException{
 
         //Tjek om der eksisterer en fil med billet-type informationer
         //Hvis der gør, så indlæs fil i rammen!
