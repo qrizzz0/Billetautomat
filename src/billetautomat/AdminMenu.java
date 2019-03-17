@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author bruger
  */
 public class AdminMenu {
-        public static void adminMenu() {
+/*        public static void adminMenu() {
         boolean admin = true;
         while (admin) {
             System.out.println("Velkommen til admin menuen.");
@@ -43,5 +43,5 @@ public class AdminMenu {
 
             }
         }
-    }
+    }*/
 }

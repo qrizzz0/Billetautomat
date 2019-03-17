@@ -35,6 +35,11 @@ public class MoneyMenu extends javax.swing.JPanel {
         label2 = new java.awt.Label();
 
         setBackground(new java.awt.Color(0, 0, 204));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+        });
 
         button1.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
         button1.setLabel("Penge tilbage");
@@ -109,6 +114,10 @@ public class MoneyMenu extends javax.swing.JPanel {
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
         Start.mWin.goToMain(this);
     }//GEN-LAST:event_button3ActionPerformed
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        label1.setText("kr: " + Start.AutomatBalance.getBalance());
+    }//GEN-LAST:event_formMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

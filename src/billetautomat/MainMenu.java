@@ -33,6 +33,11 @@ public class MainMenu extends javax.swing.JPanel {
         label1 = new java.awt.Label();
 
         setBackground(new java.awt.Color(0, 0, 204));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+        });
 
         button1.setLabel("Admin");
         button1.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +65,7 @@ public class MainMenu extends javax.swing.JPanel {
         });
 
         label1.setBackground(new java.awt.Color(153, 153, 255));
-        label1.setText("kr:");
+        label1.setText("kr:\n");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -113,6 +118,10 @@ public class MainMenu extends javax.swing.JPanel {
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         Start.mWin.goToPassw(this);
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        label1.setText("kr: " + Start.AutomatBalance.getBalance());
+    }//GEN-LAST:event_formMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

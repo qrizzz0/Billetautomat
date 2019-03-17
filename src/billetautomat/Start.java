@@ -9,6 +9,7 @@ public class Start {
     public static int PrisSum=0;
     static ArrayList<Billet> billetTyper = new ArrayList<>();
     public static MainWindow mWin = new MainWindow("Billetautomat");
+    public static BalanceHandler AutomatBalance = new BalanceHandler();
     public static void main(String[] args){
 
         //Tjek om der eksisterer en fil med billet-type informationer
@@ -33,8 +34,8 @@ public class Start {
             admin.adminMenu();
         }
         
-        BilletSalg billetSalg = new BilletSalg();
-        billetSalg.KøbBillet();
+        //BilletSalg billetSalg = new BilletSalg();
+        //billetSalg.KøbBillet();
         
         //Når billettyper er indlæst, start GUI!
         mWin.startAtMain();
