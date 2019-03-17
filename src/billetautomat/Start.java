@@ -57,9 +57,6 @@ public class Start {
             log.logToFile("Programmet kunne ikke åbne SolgteBilletter.txt, den vil selv oprette denne når en billet bliver solgt.");
         }
         
-        BilletSalg billetSalg = new BilletSalg();
-        billetSalg.KøbBillet();
-        
         //Når billettyper er indlæst, start GUI!
         mWin.startAtMain();
         mWin.pack();
