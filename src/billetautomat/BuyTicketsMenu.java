@@ -30,11 +30,18 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
         button1 = new java.awt.Button();
         button2 = new java.awt.Button();
         label1 = new java.awt.Label();
+        textArea1 = new java.awt.TextArea();
 
         setBackground(new java.awt.Color(0, 0, 204));
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 formMouseEntered(evt);
+            }
+        });
+
+        choice1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                choice1MouseClicked(evt);
             }
         });
 
@@ -51,25 +58,29 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
         label1.setBackground(new java.awt.Color(153, 153, 255));
         label1.setText("kr:");
 
+        textArea1.setBackground(new java.awt.Color(255, 255, 153));
+        textArea1.setEditable(false);
+        textArea1.setEnabled(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(117, 117, 117)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(choice1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 125, Short.MAX_VALUE)))
+                                .addComponent(choice1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -81,9 +92,13 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
                     .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(2, 2, 2)
                 .addComponent(choice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         choice1.getAccessibleContext().setAccessibleName("");
@@ -96,8 +111,15 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
 
     private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
         label1.setText("kr: " + Start.AutomatBalance.getBalance());
-        
     }//GEN-LAST:event_formMouseEntered
+
+    private void choice1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_choice1MouseClicked
+                if(choice1.getItemCount() == 0){
+            for (Billet b : Start.billetTyper){
+                choice1.add(b.GetBilletType());
+            }
+        }
+    }//GEN-LAST:event_choice1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -105,5 +127,6 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
     private java.awt.Button button2;
     private java.awt.Choice choice1;
     private java.awt.Label label1;
+    private java.awt.TextArea textArea1;
     // End of variables declaration//GEN-END:variables
 }
