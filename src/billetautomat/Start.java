@@ -37,7 +37,10 @@ public class Start {
         billetSalg.KøbBillet();
         
         //Når billettyper er indlæst, start GUI!
-      
+        mWin.startAtMain();
+        mWin.pack();
+        mWin.setVisible(true);
+        
         String SecretCode = "1337";
         String CodeInput = "1337";
         if (CodeInput.equals(SecretCode)) {
@@ -45,7 +48,7 @@ public class Start {
             admin.adminMenu();
         }
         
-        mWin.startAtMain();
+
     }
     
 }
