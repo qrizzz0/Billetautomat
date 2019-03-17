@@ -25,7 +25,7 @@ public class ReadFile {
         }
         return stringList;
     }
-    
+
     public void close() throws IOException {
             reader.close();
     }   
