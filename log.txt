@@ -15,3 +15,39 @@
 2019-03-16 20:09:30.536: Admin-menuen er åbnet
 2019-03-16 20:37:40.566: Forsøger at åbne filen indeholdende billettyperne
 2019-03-16 20:37:51.736: Admin-menuen er åbnet
+2019-03-17 11:44:20.263: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 12:22:41.371: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 12:22:49.668: Admin-menuen er åbnet
+2019-03-17 12:58:36.791: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 12:58:46.477: Admin-menuen er åbnet
+2019-03-17 12:59:08.478: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 12:59:12.643: Admin-menuen er åbnet
+2019-03-17 13:15:00.627: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:15:14.469: Admin-menuen er åbnet
+2019-03-17 13:31:06.648: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:31:29.991: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:31:32.412: Admin-menuen er åbnet
+2019-03-17 13:34:05.569: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:34:05.688: Admin-menuen er åbnet
+2019-03-17 13:41:14.214: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:41:14.454: Admin-menuen er åbnet
+2019-03-17 13:44:57.238: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:44:57.376: Admin-menuen er åbnet
+2019-03-17 13:53:09.151: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:53:09.29: Admin-menuen er åbnet
+2019-03-17 13:54:43.873: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:54:44.011: Admin-menuen er åbnet
+2019-03-17 13:55:53.466: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:55:53.582: Admin-menuen er åbnet
+2019-03-17 13:57:09.567: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 13:57:09.72: Admin-menuen er åbnet
+2019-03-17 14:02:54.663: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 14:02:54.779: Admin-menuen er åbnet
+2019-03-17 14:05:31.806: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 14:05:31.906: Admin-menuen er åbnet
+2019-03-17 14:05:41.588: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 14:05:41.719: Admin-menuen er åbnet
+2019-03-17 14:05:52.651: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 14:05:52.767: Admin-menuen er åbnet
+2019-03-17 14:05:57.947: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 14:05:58.118: Admin-menuen er åbnet

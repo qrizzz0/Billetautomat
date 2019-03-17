@@ -47,6 +47,15 @@ public class Start {
             log.logToFile("Programmet kunne ikke åbne SolgteBilletter.txt, den vil selv oprette denne når en billet bliver solgt.");
         }
         
+        //Få antallet af linjer i SolgteBilletter for at give ID til nye billetter
+        try {
+        Path path = Paths.get("./solgteBilletter.txt");
+        billetNummer = (int) Files.lines(path).count();
+        } catch (IOException ex) {
+            WriteToFile log = new WriteToFile("log.txt");
+            log.logToFile("Programmet kunne ikke åbne SolgteBilletter.txt, den vil selv oprette denne når en billet bliver solgt.");
+        }
+        
         BilletSalg billetSalg = new BilletSalg();
         billetSalg.KøbBillet();
         

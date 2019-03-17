@@ -27,5 +27,6 @@ public class BilletSalg {
             System.out.println("Balancen er ikke høj nok til at købe den valgte billet.");
         }
         
+
     }
 }
