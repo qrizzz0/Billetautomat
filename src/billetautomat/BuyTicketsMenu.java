@@ -54,6 +54,11 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
 
         button2.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
         button2.setLabel("Køb Billet");
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
 
         label1.setBackground(new java.awt.Color(153, 153, 255));
         label1.setText("kr:");
@@ -114,12 +119,25 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
     }//GEN-LAST:event_formMouseEntered
 
     private void choice1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_choice1MouseClicked
-                if(choice1.getItemCount() == 0){
+        if(choice1.getItemCount() == 0){
             for (Billet b : Start.billetTyper){
                 choice1.add(b.GetBilletType());
-            }
+            }   
+        }
+        else{
+            Start.BilletHandler.setValgtBillet(choice1.getSelectedIndex());
         }
     }//GEN-LAST:event_choice1MouseClicked
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        if(Start.AutomatBalance.getBalance() >= Start.billetTyper.get(Start.BilletHandler.getValgtBillet()).GetBilletPris()){
+            Start.BilletHandler.KøbBillet();
+            
+        }
+        else{
+            textArea1.setText("Balancen er ikke høj nok til at købe den valgte billet.");
+        }
+    }//GEN-LAST:event_button2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
