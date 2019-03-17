@@ -47,6 +47,11 @@ public class AdminPasswordMenu extends javax.swing.JPanel {
         });
 
         button2.setLabel("Bekræft");
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
 
         textField1.setText("Kodeord");
 
@@ -94,6 +99,16 @@ public class AdminPasswordMenu extends javax.swing.JPanel {
     private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
         label1.setText("kr: " + Start.AutomatBalance.getBalance());
     }//GEN-LAST:event_formMouseEntered
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        if (textField1.getText().contentEquals("1337")){
+            Start.mWin.goToAdmin(this);
+        }
+        else{
+            System.out.println(textField1.getText());
+            textField1.setText("Forkert kode!");
+        }
+    }//GEN-LAST:event_button2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
