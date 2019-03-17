@@ -99,14 +99,17 @@ public class MainMenu extends javax.swing.JPanel {
         label1.getAccessibleContext().setAccessibleName("krBar");
     }// </editor-fold>//GEN-END:initComponents
 
+    //Går til MoneyMenu, når knappen "Indsæt Penge" bliver trykket på
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
         Start.mWin.goToMoney(this);
     }//GEN-LAST:event_button3ActionPerformed
-
+    
+    //Går til Købsmenuen BuyTicketsMenu, når "Køb Billet" bliver trykket på
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
         Start.mWin.goToBuy(this);
     }//GEN-LAST:event_button2ActionPerformed
 
+    //Går til kodeordsindtastningsmenuen når "Admin" knappen bliver trykket på
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         Start.mWin.goToPassw(this);
     }//GEN-LAST:event_button1ActionPerformed

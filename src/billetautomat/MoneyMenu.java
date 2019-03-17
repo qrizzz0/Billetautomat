@@ -105,6 +105,7 @@ public class MoneyMenu extends javax.swing.JPanel {
         label1.getAccessibleContext().setAccessibleName("krBar");
     }// </editor-fold>//GEN-END:initComponents
 
+    //Går tilbage til hoved menuen MainMenu når "Tilbage" knappen bliver trykket på
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
         Start.mWin.goToMain(this);
     }//GEN-LAST:event_button3ActionPerformed

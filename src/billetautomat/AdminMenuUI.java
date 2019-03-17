@@ -42,6 +42,11 @@ public class AdminMenuUI extends javax.swing.JPanel {
         label1.setText("kr:");
 
         button1.setLabel("Tilbage");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
 
         button2.setLabel("Udskriv Log");
 
@@ -104,6 +109,11 @@ public class AdminMenuUI extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    //Går tilbage til hoved menuen MainMenu når "Tilbage" knappen bliver trykket på
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        Start.mWin.goToMain(this);
+    }//GEN-LAST:event_button1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
