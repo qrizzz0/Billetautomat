@@ -25,8 +25,8 @@ public class WriteToFile {
         Timestamp time = new Timestamp(System.currentTimeMillis());
         try {
             writer.flush();
-            writer.append(time + ": " + input + "\n");
-            writer.close();
+            writer.append(time + ": " + input + "\r\n");
+            //writer.close();
         }
         catch (IOException ex) {
             ex.getStackTrace();
@@ -54,7 +54,7 @@ public class WriteToFile {
         try {
             writer.flush();
             writer.append(input + "\n");
-            writer.close();
+            //writer.close();
         }
         catch (IOException ex) {
             ex.getStackTrace();
