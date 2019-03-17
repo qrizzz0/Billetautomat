@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 public class Start {
     public static int PrisSum=0;
     static ArrayList<Billet> billetTyper = new ArrayList<>();
+    public static MainWindow mWin = new MainWindow("Billetautomat");
     public static void main(String[] args){
 
         //Tjek om der eksisterer en fil med billet-type informationer
@@ -43,7 +44,8 @@ public class Start {
             Admin admin = new Admin();
             admin.adminMenu();
         }
-
+        
+        mWin.startAtMain();
     }
     
 }
