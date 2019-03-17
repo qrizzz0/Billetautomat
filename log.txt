@@ -71,3 +71,7 @@
 2019-03-17 21:19:25.516: Programmet kunne ikke åbne SolgteBilletter.txt, den vil selv oprette denne når en billet bliver solgt.
 2019-03-17 21:19:25.522: Programmet kunne ikke åbne SolgteBilletter.txt, den vil selv oprette denne når en billet bliver solgt.
 2019-03-17 21:19:25.666: Admin-menuen er åbnet
+2019-03-17 23:16:15.377: Forsøger at åbne filen indeholdende billettyperne
+2019-03-17 23:16:15.566: Admin-menuen er åbnet
+2019-03-18 00:48:25.323: Forsøger at åbne filen indeholdende billettyperne
+2019-03-18 00:48:25.503: Admin-menuen er åbnet
