@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList; 
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -47,8 +49,14 @@ public class ReadFile {
         return text;
     }
     
-    public void searchLog (String fileName, String SearchString) throws FileNotFoundException {
-        Scanner scan = new Scanner(new File(fileName));
+     public void searchLog (String fileName, String SearchString) {
+      
+        Scanner scan = null;
+        try {
+            scan = new Scanner(new File(fileName));
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(WriteToFile.class.getName()).log(Level.SEVERE, null, ex);
+        }
         while(scan.hasNext()){
             String line = scan.nextLine();
             if(line.contains(SearchString)){
@@ -57,7 +65,7 @@ public class ReadFile {
         }
     } 
     
-    public void sinceAdminStart(String fileName, String searchString) throws FileNotFoundException {
+   public void sinceAdminStart(String fileName, String searchString) {
         
         String str1 = readLogToString(fileName);
         int index = 0;
