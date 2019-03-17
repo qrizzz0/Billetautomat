@@ -5,11 +5,8 @@ import java.util.Scanner;
 public class BilletSalg {
         
     public void KøbBillet() {
-        System.out.println("Indtast midlertidig balance");
-        
-        Scanner scan = new java.util.Scanner(System.in);
-        int MidBalance = scan.nextInt(); //Midlertidig balance indtasting
-        
+        Scanner scan = new java.util.Scanner(System.in);        
+                
         System.out.println("Hvilken billet vil du købe?");
         for(int i=0;i<Start.billetTyper.size();i++){
             System.out.println(i+". "+Start.billetTyper.get(i).GetBilletType()+" "+Start.billetTyper.get(i).GetBilletPris()+"kr.");
@@ -17,7 +14,11 @@ public class BilletSalg {
         
         int ValgtBillet = scan.nextInt(); //Midlertidig balance indtasting
         
-        if (MidBalance>=Start.billetTyper.get(ValgtBillet).GetBilletPris()){
+        if (        Start.AutomatBalance.getBalance()>=Start.billetTyper.get(ValgtBillet).GetBilletPris()){
+                    
+                    //Trækker valgte billetpris fra balancen
+                    Start.AutomatBalance.setBalance(Start.AutomatBalance.getBalance()-Start.billetTyper.get(ValgtBillet).GetBilletPris());
+                   //Skal jeg burge til at teste om det virke senere: System.out.println("Balance:"+Start.AutomatBalance.getBalance());
                     BilletDesign.udskrivning(ValgtBillet);
                     Start.PrisSum=Start.PrisSum+Start.billetTyper.get(ValgtBillet).GetBilletPris();
                     WriteToFile writer = new WriteToFile("solgteBilletter.txt");
