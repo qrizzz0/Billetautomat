@@ -32,17 +32,12 @@ public class Start {
             admin.adminMenu();
         }
         
-
-        Billet.KøbBillet();
-
-//Hvis ikke: Spørg hvor mange billetter og hvilken type
-               //Skriv billettyperne til en fil.
-          //Else: Læs billettyper ind fra fil.
+        BilletSalg billetSalg = new BilletSalg();
+        billetSalg.KøbBillet();
         
         //Når billettyper er indlæst, start GUI!
       
         String SecretCode = "1337";
-                       
         String CodeInput = "1337";
         if (CodeInput.equals(SecretCode)) {
             Admin admin = new Admin();
