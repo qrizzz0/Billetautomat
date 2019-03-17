@@ -32,6 +32,11 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
         label1 = new java.awt.Label();
 
         setBackground(new java.awt.Color(0, 0, 204));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+        });
 
         button1.setLabel("Tilbage");
         button1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +93,11 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         Start.mWin.goToMain(this);
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        label1.setText("kr: " + Start.AutomatBalance.getBalance());
+        
+    }//GEN-LAST:event_formMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
