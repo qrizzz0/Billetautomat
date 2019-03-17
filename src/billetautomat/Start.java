@@ -14,6 +14,7 @@ public class Start {
     public static int billetNummer = 0;
     public static MainWindow mWin = new MainWindow("Billetautomat");
     public static BalanceHandler AutomatBalance = new BalanceHandler();
+    public static BilletSalg BilletHandler = new BilletSalg();
     public static void main(String[] args) throws FileNotFoundException{
 
         //Tjek om der eksisterer en fil med billet-type informationer
