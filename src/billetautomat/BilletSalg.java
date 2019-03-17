@@ -20,7 +20,8 @@ public class BilletSalg {
         if (MidBalance>=Start.billetTyper.get(ValgtBillet).GetBilletPris()){
                     BilletDesign.udskrivning(ValgtBillet);
                     Start.PrisSum=Start.PrisSum+Start.billetTyper.get(ValgtBillet).GetBilletPris();
-                    Start.billetNummer++;
+                    WriteToFile writer = new WriteToFile("solgteBilletter.txt");
+                    writer.saveTicket(Start.billetTyper.get(ValgtBillet).GetBilletType(), Start.billetTyper.get(ValgtBillet).GetBilletPris());
         }
         else{
             System.out.println("Balancen er ikke høj nok til at købe den valgte billet.");

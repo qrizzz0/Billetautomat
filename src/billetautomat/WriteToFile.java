@@ -28,6 +28,13 @@ public class WriteToFile {
         }
     }
     
+    public void saveTicket(String billettype, int pris) {
+        long time=System.currentTimeMillis();  
+        java.util.Date date=new java.util.Date(time);
+        //Skriver informationer om den solgte billet - ID formateret som 3-digit tal.
+        println(String.format("%03d", Start.billetNummer) + "," + billettype + "," + pris + "," + date);
+    }
+    
     public void print(String input) {
         try {
             writer.flush();

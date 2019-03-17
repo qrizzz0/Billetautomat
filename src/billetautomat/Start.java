@@ -2,6 +2,9 @@
 package billetautomat;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
@@ -28,19 +31,28 @@ public class Start {
             }
         } catch (IOException ex){
             //ex.printStackTrace(); //Vi forventer egentlig en fejl, så vi skal ikke smide en fejl tilbage..
-            System.out.println("Ingen billettyper fundet i forvejen - det må være første gang maskinen kører");
-            System.out.println("Starter administrationspanelet!");
+            WriteToFile log = new WriteToFile("log.txt");
+            log.logToFile("Kunne ikke åbne billetTyper.txt - vi må være i gang med opsætning - starter ADMIN!");
             Admin admin = new Admin();
             admin.adminMenu();
+        }
+        
+        //Få antallet af linjer i SolgteBilletter for at give ID til nye billetter
+        try {
+        Path path = Paths.get("./solgteBilletter.txt");
+        billetNummer = (int) Files.lines(path).count();
+        } catch (IOException ex) {
+            WriteToFile log = new WriteToFile("log.txt");
+            log.logToFile("Programmet kunne ikke åbne SolgteBilletter.txt, den vil selv oprette denne når en billet bliver solgt.");
         }
         
         BilletSalg billetSalg = new BilletSalg();
         billetSalg.KøbBillet();
         
         //Når billettyper er indlæst, start GUI!
-        //mWin.startAtMain();
-        //mWin.pack();
-        //mWin.setVisible(true);
+        mWin.startAtMain();
+        mWin.pack();
+        mWin.setVisible(true);
         
         String SecretCode = "1337";
         String CodeInput = "1337";
