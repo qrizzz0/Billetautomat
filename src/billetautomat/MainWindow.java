@@ -28,26 +28,35 @@ public class MainWindow extends JFrame{
             this.remove(m);
             this.add(mainMen);
             this.repaint();
+            this.revalidate();
         }
         public void startAtMain(){
             this.add(mainMen);
             this.repaint();
+            this.revalidate();
         }
         public void goToAdmin(Component m){
             this.remove(m);
             this.add(adMen);
+            this.repaint();
+            this.revalidate();
         }
         public void goToPassw(Component m){
             this.remove(m);
             this.add(adPassMen);
+            this.repaint();
+            this.revalidate();
         }
         public void goToMoney(Component m){
             this.remove(m);
             this.add(monMen);
+            this.repaint();
+            this.revalidate();
         }
         public void goToBuy(Component m){
             this.remove(m);
             this.add(buTiMen);
             this.repaint();
+            this.revalidate();
         }
 }
