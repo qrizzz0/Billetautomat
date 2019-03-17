@@ -19,10 +19,12 @@ public class BilletSalg {
         
         if (MidBalance>=Start.billetTyper.get(ValgtBillet).GetBilletPris()){
                     BilletDesign.udskrivning(ValgtBillet);
+                    Start.PrisSum=Start.PrisSum+Start.billetTyper.get(ValgtBillet).GetBilletPris();
+                    Start.billetNummer++;
         }
         else{
             System.out.println("Balancen er ikke høj nok til at købe den valgte billet.");
         }
-        Start.PrisSum=Start.PrisSum+Start.billetTyper.get(ValgtBillet).GetBilletPris();
+
     }
 }

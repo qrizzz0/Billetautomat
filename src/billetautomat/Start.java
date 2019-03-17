@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 public class Start {
     public static int PrisSum=0;
     static ArrayList<Billet> billetTyper = new ArrayList<>();
+    public static int billetNummer = 0;
     public static MainWindow mWin = new MainWindow("Billetautomat");
     public static void main(String[] args){
 
@@ -37,9 +38,9 @@ public class Start {
         billetSalg.KøbBillet();
         
         //Når billettyper er indlæst, start GUI!
-        mWin.startAtMain();
-        mWin.pack();
-        mWin.setVisible(true);
+        //mWin.startAtMain();
+        //mWin.pack();
+        //mWin.setVisible(true);
         
         String SecretCode = "1337";
         String CodeInput = "1337";
