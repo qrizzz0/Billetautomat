@@ -57,7 +57,7 @@ public class Admin {
         System.out.println("1. Tilføj ny billettype");
         System.out.println("2. Fjern eksisterende billettype");
         System.out.println("3. Se liste over eksisterende billettyper");
-      
+        
             
         int valg = scan.nextInt();
             switch (valg) {
