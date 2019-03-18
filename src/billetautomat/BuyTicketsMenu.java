@@ -147,7 +147,7 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
             Start.BilletHandler.KøbBillet();
             //Denne ret lange linje kode sætter tekstfætets tekst til at være lig med sigselv + "1x billettyppen" af den valgte bilet
             //Med andre ord tildføjer den nyligt valgte billetter til listen.
-            textArea1.setText(textArea1.getText() + "\n" + "1x " + Start.billetTyper.get(Start.BilletHandler.getValgtBillet()).GetBilletType());
+            textArea1.setText(textArea1.getText() + "\n" + Start.BilletHandler.getAntalBilletter() + "x " + Start.billetTyper.get(Start.BilletHandler.getValgtBillet()).GetBilletType());
             
         }
         else{
