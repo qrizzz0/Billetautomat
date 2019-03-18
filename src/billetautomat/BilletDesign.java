@@ -14,7 +14,7 @@ public class BilletDesign {
         System.out.println("@@                      @@");
         System.out.println("@@       "+Start.billetTyper.get(ValgtBillet).GetBilletType()+"            @@");
         System.out.println("@@                      @@");
-        System.out.println("@@         "+Start.billetTyper.get(ValgtBillet).GetBilletPris()+"          @@");
+        System.out.println("@@         "+Start.billetTyper.get(ValgtBillet).GetBilletPris()+"kr.       @@");
         System.out.println("@@                      @@");
         System.out.println("@@                      @@");
         System.out.println("@@                      @@");
