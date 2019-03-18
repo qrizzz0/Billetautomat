@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class BilletSalg {
         
-    private static int valgtBillet;
-    private static int AntalBilletter;
+    private static int valgtBillet = 0;
+    private static int AntalBilletter = 1;
     
     public void setValgtBillet(int indx){
         valgtBillet = indx;
