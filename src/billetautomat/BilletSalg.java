@@ -20,12 +20,18 @@ public class BilletSalg {
         return AntalBilletter;
     }   
     public void KøbBillet() {
-        System.out.println("Indtast hvor mange af valgte typebillet du vil have?");
+        int TotalSum=0;
+                TotalSum=AntalBilletter*Start.billetTyper.get(valgtBillet).GetBilletPris();
+                Start.AutomatBalance.setBalance(Start.AutomatBalance.getBalance()-TotalSum);
                 
-                Start.PrisSum=Start.PrisSum+Start.billetTyper.get(valgtBillet).GetBilletPris();
-                BilletDesign.udskrivning(valgtBillet);
                 WriteToFile writer = new WriteToFile("solgteBilletter.txt");
-                writer.saveTicket(Start.billetTyper.get(valgtBillet).GetBilletType(), Start.billetTyper.get(valgtBillet).GetBilletPris());
+
+                for(int i=0;i<AntalBilletter;i++){
+                    BilletDesign.udskrivning(valgtBillet);
+                    writer.saveTicket(Start.billetTyper.get(valgtBillet).GetBilletType(), Start.billetTyper.get(valgtBillet).GetBilletPris());
+                }
+                Start.PrisSum=Start.PrisSum+Start.billetTyper.get(valgtBillet).GetBilletPris();
+                
      
     }
 }
