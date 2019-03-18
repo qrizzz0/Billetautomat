@@ -6,6 +6,9 @@
       <Color blue="cc" green="0" red="0" type="rgb"/>
     </Property>
   </Properties>
+  <Events>
+    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="formMouseEntered"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -30,13 +33,9 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace pref="25" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="textField1" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="button5" min="-2" pref="83" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="button4" min="-2" pref="80" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="button5" alignment="1" min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="textField1" min="-2" pref="173" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="15" max="32767" attributes="0"/>
                   </Group>
@@ -73,10 +72,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="textArea1" pref="212" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="button4" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="button5" min="-2" pref="48" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="button5" min="-2" pref="48" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="textField1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -116,15 +112,13 @@
         <Property name="label" type="java.lang.String" value="Salgsoversigt"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Button" name="button4">
-      <Properties>
-        <Property name="label" type="java.lang.String" value="S&#xe6;t Pris"/>
-      </Properties>
-    </Component>
     <Component class="java.awt.Button" name="button5">
       <Properties>
         <Property name="label" type="java.lang.String" value="S&#xe6;t balance"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="java.awt.TextField" name="textField1">
     </Component>
