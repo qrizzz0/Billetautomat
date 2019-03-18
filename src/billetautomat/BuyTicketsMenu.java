@@ -156,7 +156,7 @@ public class BuyTicketsMenu extends javax.swing.JPanel {
     }//GEN-LAST:event_button2ActionPerformed
 
     private void textField1TextValueChanged(java.awt.event.TextEvent evt) {//GEN-FIRST:event_textField1TextValueChanged
-        // TODO add your handling code here:
+        Start.BilletHandler.setAntalBilletter(Integer.parseInt(textField1.getText()));
     }//GEN-LAST:event_textField1TextValueChanged
 
 
