@@ -14,10 +14,10 @@ public class BilletSalg {
         return valgtBillet;
     }
     public void setAntalBilletter(int Antal){
-        valgtBillet = Antal;
+        AntalBilletter = Antal;
     }
     public int getAntalBilletter(){
-        return valgtBillet;
+        return AntalBilletter;
     }   
     public void KøbBillet() {
         System.out.println("Indtast hvor mange af valgte typebillet du vil have?");
